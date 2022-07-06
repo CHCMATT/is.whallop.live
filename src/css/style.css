@@ -1,0 +1,31 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
+.scrollbar-hide {
+	-ms-overflow-style: none;
+}
+
+.answer-text {
+	font-size: 20em;
+	text-align: center;
+}
+
+.answer-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.bg-color-red {
+	background-color: #ee6055;
+}
+
+.bg-color-green {
+	background-color: #60d394;
+}
