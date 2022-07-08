@@ -15,6 +15,10 @@ body {
 	text-align: center;
 }
 
+.answer-subtext {
+	text-align: center;
+}
+
 .answer-container {
 	position: absolute;
 	top: 50%;
