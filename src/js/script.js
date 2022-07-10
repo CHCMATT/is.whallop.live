@@ -1,5 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
-	var liveStatus = 'not live';
+document.addEventListener("DOMContentLoaded", async function() {
+
+	let liveStatus = await fetch('https://ln3sjx3k5vktsrgwmwwpn56bue0jeeht.lambda-url.us-east-1.on.aws/', {
+		headers: {
+			"Content-type": "application/json"
+		},
+		method: 'GET',
+	})
+	.then(response => { return response.text(); })
+	.then(function(data) { return JSON.stringify(data); });
+	liveStatus = liveStatus.replace(/["']/g, "");
 
 	let background = document.getElementById('html-background');
 	let title = document.getElementById('answer-text');
@@ -22,3 +31,4 @@ document.addEventListener("DOMContentLoaded", function() {
 		subtitle.innerText = 'We\'re not sure if Whallop is live or not.'
 	}
 });
+
