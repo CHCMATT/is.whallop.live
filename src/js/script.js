@@ -8,11 +8,14 @@ document.addEventListener("DOMContentLoaded", async function() {
 	})
 	.then(response => { return response.text(); })
 	.then(function(data) { return JSON.stringify(data); });
+
 	liveStatus = liveStatus.replace(/["']/g, "");
+	console.log(`whallop is: ${liveStatus}`);
 
 	let background = document.getElementById('html-background');
 	let title = document.getElementById('answer-text');
 	let subtitle = document.getElementById('answer-subtext');
+
 	if (liveStatus == 'live') {
 		background.classList.add('bg-color-live');
 		title.innerText = 'Yes!'
