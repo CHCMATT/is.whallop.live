@@ -36,7 +36,19 @@ body {
 }
 
 .bg-color-unknown {
-	background-color: #555555;
+	background-color: #555;
+}
+
+#progressBar {
+  width: 100%;
+  height: 10px;
+	bottom: 0px;
+	position: absolute;
+}
+
+#progressBar div {
+  height: 100%;
+  background-color: #4A4A4A;
 }
 
 @media only screen and (max-width: 600px) {
