@@ -20,6 +20,11 @@ body {
 	text-align: center;
 }
 
+.error-subtext {
+	font-size: .75vw;
+	text-align: center;
+}
+
 .answer-container {
 	position: absolute;
 	top: 50%;
@@ -36,7 +41,7 @@ body {
 }
 
 .bg-color-unknown {
-	background-color: #555;
+	background-color: #777;
 }
 
 #progressBar {
@@ -59,6 +64,11 @@ body {
 	
 	.answer-subtext {
 		font-size: 2.5vw;
+		text-align: center;
+	}
+
+	.error-subtext {
+		font-size: 1.875vw;
 		text-align: center;
 	}
 }
