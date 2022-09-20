@@ -69,10 +69,8 @@ async function sendDiscordMsg(webhookBody) {
 async function sendErrorAlert(errorMsg, navigator) {
 	const currIsoTime = new Date().toISOString();
 
-	var nVer = navigator.appVersion;
 	var nAgt = navigator.userAgent;
 	var browserName  = navigator.appName;
-	var fullVersion  = ''+parseFloat(navigator.appVersion); 
 	var majorVersion = parseInt(navigator.appVersion,10);
 	var nameOffset,verOffset,ix;
 
@@ -115,21 +113,14 @@ async function sendErrorAlert(errorMsg, navigator) {
 		browserName = navigator.appName;
 	}
 	}
-	// trim the fullVersion string at semicolon/space if present
-	if ((ix=fullVersion.indexOf(";"))!=-1)
-		fullVersion=fullVersion.substring(0,ix);
-	if ((ix=fullVersion.indexOf(" "))!=-1)
-		fullVersion=fullVersion.substring(0,ix);
 
 	majorVersion = parseInt(''+fullVersion,10);
 	if (isNaN(majorVersion)) {
 	fullVersion  = ''+parseFloat(navigator.appVersion); 
-	majorVersion = parseInt(navigator.appVersion,10);
 	}
 
-	browserInfo = `**Browser name:** ${browserName}\n**Browser version:** ${majorVersion}\n**Cookies Enabled?:** ${navigator.cookieEnabled}\n**Platform:** ${navigator.platform}`;
+	browserInfo = `**Browser name:** ${browserName} ${majorVersion}\n**Cookies Enabled:** ${navigator.cookieEnabled}\n**Platform:** ${navigator.platform}`;
 	var discordMessage = {
-		"content": `<@177088916250296320>`,
 		"embeds": [
 				{
 					"title": `is.whallop.live error alert`,
