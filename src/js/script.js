@@ -83,7 +83,7 @@ async function sendErrorAlert(errorMsg, navigator) {
 	}
 	// In MSIE, the true version is after "MSIE" in userAgent
 	else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
-	browserName = "Microsoft Internet Explorer";
+	browserName = "Internet Explorer";
 	fullVersion = nAgt.substring(verOffset+5);
 	}
 	// In Chrome, the true version is after "Chrome" 
